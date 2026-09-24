@@ -815,7 +815,7 @@ section{scroll-margin-top:calc(var(--nav-h) + 12px)}
           <li><span class="ck"><svg class="ico"><use href="#i-check"/></svg></span>Método para pedidos melhores e prática com situações reais</li>
           <li><span class="ck"><svg class="ico"><use href="#i-check"/></svg></span>Kit IA na Vida Real</li>
         </ul>
-        <a class="btn btn-lg btn-ghost" href="#" data-inscricao="curso">Quero o curso <svg class="ico"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-lg btn-ghost" href="https://roems.vercel.app/preorder/d8b3c151dca3c2fa2c21549c6d221f90" target="_blank" rel="noopener" data-inscricao="curso">Quero o curso <svg class="ico"><use href="#i-arrow"/></svg></a>
       </article>
       <article class="plan plan-hot rv" style="--d:.08s">
         <div class="plan-top"><p class="plan-name">Curso + Mentoria individual</p><span class="seats">Limite de 10 vagas</span></div>
@@ -824,7 +824,7 @@ section{scroll-margin-top:calc(var(--nav-h) + 12px)}
           <li><span class="ck"><svg class="ico"><use href="#i-check"/></svg></span>Tudo do plano Curso</li>
           <li><span class="ck"><svg class="ico"><use href="#i-check"/></svg></span><span>Mentoria individual <span class="ph">[INSERIR DURAÇÃO E FORMATO DA MENTORIA]</span></span></li>
         </ul>
-        <a class="btn btn-lg btn-light" href="#" data-inscricao="mentoria">Quero curso + mentoria <svg class="ico"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-lg btn-light" href="https://roems.vercel.app/preorder/d8b3c151dca3c2fa2c21549c6d221f90" target="_blank" rel="noopener" data-inscricao="mentoria">Quero curso + mentoria <svg class="ico"><use href="#i-arrow"/></svg></a>
       </article>
     </div>
     </div>
@@ -926,8 +926,8 @@ section{scroll-margin-top:calc(var(--nav-h) + 12px)}
   doc.classList.add('js');
   var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* Links de inscrição: [INSERIR] os links reais do checkout de cada plano. */
-  var LINKS={curso:'',mentoria:''};
+  /* Links de pagamento de cada plano. */
+  var LINKS={curso:'https://roems.vercel.app/preorder/d8b3c151dca3c2fa2c21549c6d221f90',mentoria:'https://roems.vercel.app/preorder/d8b3c151dca3c2fa2c21549c6d221f90'};
   document.querySelectorAll('[data-inscricao]').forEach(function(a){
     var url=LINKS[a.getAttribute('data-inscricao')];
     if(url){a.href=url;a.target='_blank';a.rel='noopener';}
