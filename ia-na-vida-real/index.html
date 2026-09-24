@@ -1,0 +1,934 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>IA na Vida Real | Curso online ao vivo de Inteligência Artificial para iniciantes</title>
+<meta name="description" content="Curso online e ao vivo, em 4 encontros de 1h30, para aprender a usar Inteligência Artificial em tarefas reais: organizar, pensar, pesquisar, escrever, analisar e criar. Nível iniciante, 100% prático.">
+<meta name="theme-color" content="#0B1F4D">
+<link rel="canonical" href="[INSERIR URL DA PÁGINA]">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="IA na Vida Real — curso online ao vivo">
+<meta property="og:description" content="Aprenda a usar IA para organizar, pensar, pesquisar, escrever e criar melhor. 4 encontros ao vivo, 6 horas, nível iniciante.">
+<meta property="og:url" content="[INSERIR URL DA PÁGINA]">
+<meta property="og:image" content="[INSERIR URL DA IMAGEM DE COMPARTILHAMENTO]">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "name": "IA na Vida Real",
+  "alternateName": "Inteligência Artificial na Vida Real",
+  "description": "Aprenda a usar IA para organizar, pensar, pesquisar, escrever e criar melhor. Curso online ao vivo com 4 encontros de 1h30.",
+  "inLanguage": "pt-BR",
+  "educationalLevel": "Iniciante",
+  "hasCourseInstance": {
+    "@type": "CourseInstance",
+    "courseMode": "online",
+    "courseWorkload": "PT6H"
+  }
+}
+</script>
+<style>
+:root{
+  --bg:#F6F7F3;
+  --surface:#FFFFFF;
+  --surface-2:#EEF1F6;
+  --ink:#1F232B;
+  --ink-soft:#4B5260;
+  --muted:#6B7282;
+  --line:#E1E4EA;
+  --navy:#0B1F4D;
+  --navy-2:#132B66;
+  --blue:#2F5BFF;
+  --blue-soft:#E6ECFF;
+  --blue-ink:#1D44E0;
+  --green:#12A36B;
+  --green-soft:#DDF4EA;
+  --yellow:#F4C23D;
+  --yellow-soft:#FFF4D1;
+  --on-navy:#F3F5FB;
+  --on-navy-soft:#AEB9D6;
+  --shadow:0 1px 2px rgba(11,31,77,.05),0 12px 32px -12px rgba(11,31,77,.16);
+  --shadow-lg:0 2px 4px rgba(11,31,77,.04),0 32px 64px -24px rgba(11,31,77,.28);
+  --r-sm:12px;--r:18px;--r-lg:28px;
+  --f-display:"Bricolage Grotesque","Avenir Next","Segoe UI",system-ui,sans-serif;
+  --f-body:"Geist","Helvetica Neue","Segoe UI",system-ui,sans-serif;
+  --f-mono:"Geist Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
+  --nav-h:68px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#0A0F1C;--surface:#111827;--surface-2:#172036;--ink:#E9ECF3;--ink-soft:#BFC6D6;--muted:#8E97AB;--line:#232D44;
+    --navy:#0F2257;--navy-2:#18307A;--blue:#5B7FFF;--blue-soft:#1A2650;--blue-ink:#9DB2FF;
+    --green:#3CCB8E;--green-soft:#0F2E24;--yellow:#F4C23D;--yellow-soft:#2E2610;
+    --on-navy:#F3F5FB;--on-navy-soft:#AEB9D6;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 12px 32px -12px rgba(0,0,0,.6);
+    --shadow-lg:0 2px 4px rgba(0,0,0,.3),0 32px 64px -24px rgba(0,0,0,.7);
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#0A0F1C;--surface:#111827;--surface-2:#172036;--ink:#E9ECF3;--ink-soft:#BFC6D6;--muted:#8E97AB;--line:#232D44;
+  --navy:#0F2257;--navy-2:#18307A;--blue:#5B7FFF;--blue-soft:#1A2650;--blue-ink:#9DB2FF;
+  --green:#3CCB8E;--green-soft:#0F2E24;--yellow:#F4C23D;--yellow-soft:#2E2610;
+  --on-navy:#F3F5FB;--on-navy-soft:#AEB9D6;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 12px 32px -12px rgba(0,0,0,.6);
+  --shadow-lg:0 2px 4px rgba(0,0,0,.3),0 32px 64px -24px rgba(0,0,0,.7);
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--f-body);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+img,svg{max-width:100%}
+a{color:inherit}
+h1,h2,h3,p,ul,ol{margin:0}
+ul{padding:0;list-style:none}
+h1,h2,h3{font-family:var(--f-display);font-weight:600;letter-spacing:-.025em;line-height:1.06;text-wrap:balance}
+p{text-wrap:pretty}
+:focus-visible{outline:2.5px solid var(--blue);outline-offset:3px;border-radius:8px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.ico{width:1em;height:1em;flex:none;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+
+.wrap{width:100%;max-width:1180px;margin-inline:auto;padding-inline:20px}
+section{scroll-margin-top:calc(var(--nav-h) + 12px)}
+.section{padding-block:clamp(80px,11vw,136px)}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font:500 12px/1.3 var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--blue-ink)}
+.eyebrow::before{content:"";width:18px;height:1.5px;background:currentColor;border-radius:2px}
+.h2{font-size:clamp(2rem,4.6vw,3.35rem);max-width:20ch}
+.lead{font-size:clamp(1.05rem,1.6vw,1.2rem);color:var(--ink-soft);max-width:60ch}
+.head{display:grid;gap:18px;margin-bottom:clamp(40px,6vw,64px)}
+.ph{display:inline;padding:.05em .4em;border-radius:6px;background:var(--yellow-soft);color:var(--ink);border:1px dashed #C99A12;font:500 .82em/1.5 var(--f-mono);letter-spacing:.02em;white-space:normal}
+
+/* Buttons */
+.btn{--bg-btn:var(--blue);display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 24px;border-radius:999px;border:0;background:var(--bg-btn);color:#fff;font:600 14px/1 var(--f-body);letter-spacing:.06em;text-transform:uppercase;text-decoration:none;cursor:pointer;position:relative;isolation:isolate;overflow:hidden;box-shadow:0 1px 0 rgba(255,255,255,.25) inset,0 10px 24px -10px rgba(47,91,255,.7);transition:transform .25s cubic-bezier(.2,.8,.2,1),box-shadow .25s,background-color .25s}
+.btn::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.28) 50%,transparent 70%);transform:translateX(-120%);transition:transform .7s ease}
+.btn:hover{transform:translateY(-2px);box-shadow:0 1px 0 rgba(255,255,255,.25) inset,0 16px 32px -12px rgba(47,91,255,.8)}
+.btn:hover::after{transform:translateX(120%)}
+.btn:active{transform:translateY(0) scale(.98)}
+.btn .ico{font-size:18px;stroke-width:2.2;transition:transform .25s}
+.btn:hover .ico{transform:translateX(4px)}
+.btn-ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--line)}
+.btn-ghost:hover{box-shadow:inset 0 0 0 1.5px var(--ink);background:var(--surface)}
+.btn-ghost:hover .ico{transform:translateY(3px)}
+.btn-light{background:#fff;color:var(--navy);box-shadow:0 18px 40px -16px rgba(0,0,0,.5)}
+.btn-light:hover{box-shadow:0 22px 44px -16px rgba(0,0,0,.6)}
+.btn-lg{min-height:60px;padding:0 32px;font-size:15px}
+
+/* Nav */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid transparent;transition:border-color .3s,background-color .3s}
+.nav.scrolled{border-bottom-color:var(--line)}
+.nav .wrap{height:var(--nav-h);display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font:700 18px/1 var(--f-display);letter-spacing:-.02em}
+.brand-mark{width:30px;height:30px;border-radius:9px;background:var(--navy);display:grid;place-items:center;position:relative}
+.brand-mark::before{content:"";width:12px;height:12px;border-radius:50%;background:var(--blue);box-shadow:0 0 0 3px rgba(47,91,255,.25)}
+.brand-mark::after{content:"";position:absolute;right:5px;top:5px;width:5px;height:5px;border-radius:50%;background:var(--yellow)}
+.nav-links{display:none;gap:30px;font-size:15px;color:var(--ink-soft)}
+.nav-links a{text-decoration:none;position:relative;padding-block:6px}
+.nav-links a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1.5px;background:var(--blue);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.nav-links a:hover{color:var(--ink)}
+.nav-links a:hover::after{transform:scaleX(1)}
+.nav .btn{min-height:42px;padding:0 18px;font-size:12px;white-space:nowrap}
+@media (max-width:420px){.nav .btn{padding:0 13px;font-size:11px;letter-spacing:.04em}.brand{font-size:16px}}
+@media (min-width:900px){.nav-links{display:flex}}
+
+/* Hero */
+.hero{position:relative;padding-block:clamp(40px,7vw,96px) clamp(64px,9vw,112px);overflow:hidden}
+.hero::before{content:"";position:absolute;width:760px;height:760px;right:-240px;top:-260px;border-radius:50%;background:radial-gradient(closest-side,rgba(47,91,255,.16),transparent);pointer-events:none}
+.hero::after{content:"";position:absolute;width:420px;height:420px;left:-200px;bottom:-200px;border-radius:50%;background:radial-gradient(closest-side,rgba(244,194,61,.14),transparent);pointer-events:none}
+.hero-grid{position:relative;z-index:1;display:grid;gap:56px;align-items:center}
+@media (min-width:980px){.hero-grid{grid-template-columns:1.02fr .98fr;gap:64px}}
+.pill{display:inline-flex;flex-wrap:wrap;align-items:center;gap:8px 10px;padding:8px 14px;border-radius:999px;background:var(--surface);box-shadow:inset 0 0 0 1px var(--line);font:500 11.5px/1.3 var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft)}
+.pill .live{display:inline-flex;align-items:center;gap:7px;color:var(--ink)}
+.pill .live::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 0 0 rgba(18,163,107,.5);animation:pulse 2.2s infinite}
+.pill i{font-style:normal;color:var(--line)}
+@keyframes pulse{70%{box-shadow:0 0 0 8px rgba(18,163,107,0)}100%{box-shadow:0 0 0 0 rgba(18,163,107,0)}}
+.hero h1{margin-top:26px;font-size:clamp(3.4rem,10vw,6.6rem);font-weight:700;letter-spacing:-.045em;line-height:.94;color:var(--navy)}
+:root[data-theme="dark"] .hero h1{color:var(--ink)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .hero h1{color:var(--ink)}}
+.hero h1 .hl{position:relative;white-space:nowrap;color:var(--blue)}
+.hero h1 .hl svg{position:absolute;left:0;right:0;bottom:-.1em;width:100%;height:.22em;overflow:visible}
+.hero h1 .hl path{fill:none;stroke:var(--yellow);stroke-width:7;stroke-linecap:round;stroke-dasharray:420;stroke-dashoffset:0;animation:draw 1.2s .5s cubic-bezier(.6,0,.2,1) backwards}
+@keyframes draw{from{stroke-dashoffset:420}}
+.hero-sub{margin-top:28px;font-size:clamp(1.12rem,1.9vw,1.32rem);line-height:1.5;color:var(--ink);max-width:36ch}
+.hero-comp{margin-top:16px;color:var(--ink-soft);max-width:48ch}
+.hero-ctas{margin-top:34px;display:flex;flex-wrap:wrap;gap:12px}
+.hero-meta{margin-top:30px;display:flex;flex-wrap:wrap;gap:10px 22px;font-size:14px;color:var(--muted)}
+.hero-meta span{display:inline-flex;align-items:center;gap:8px}
+.hero-meta .ico{color:var(--green);font-size:17px;stroke-width:2.4}
+
+/* Assistant card */
+.stage{position:relative;max-width:560px;width:100%;margin-inline:auto}
+.assistant{position:relative;z-index:1;background:var(--surface);border-radius:var(--r-lg);box-shadow:var(--shadow-lg),inset 0 0 0 1px var(--line);padding:20px;display:grid;gap:18px}
+.as-top{display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:14px}
+.as-top b{font-weight:600}
+.as-status{display:inline-flex;align-items:center;gap:7px;font:500 11px/1 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--green)}
+.as-status::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor}
+.verbs{display:flex;align-items:center;gap:4px;overflow-x:auto;scrollbar-width:none;margin-inline:-4px;padding:4px}
+.verbs::-webkit-scrollbar{display:none}
+.verb{flex:none;display:inline-flex;align-items:center;gap:7px;padding:8px 12px;border-radius:999px;border:0;background:transparent;color:var(--muted);font:500 13.5px/1 var(--f-body);cursor:pointer;transition:background-color .25s,color .25s,box-shadow .25s}
+.verb .ico{font-size:15px}
+.verb:hover{color:var(--ink);background:var(--surface-2)}
+.verb[aria-pressed="true"]{background:var(--navy);color:#fff;box-shadow:0 6px 16px -8px rgba(11,31,77,.6)}
+.verb-sep{flex:none;color:var(--line);font-size:13px}
+.verb-sep .ico{stroke-width:2}
+.chat{display:grid;gap:12px;min-height:268px;align-content:start}
+.msg{border-radius:16px;padding:14px 16px;font-size:15px;line-height:1.5}
+.msg small{display:block;font:500 10.5px/1 var(--f-mono);letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px;opacity:.75}
+.msg-you{background:var(--blue);color:#fff;margin-left:12%;border-bottom-right-radius:6px}
+.msg-ai{background:var(--surface-2);color:var(--ink);margin-right:6%;border-bottom-left-radius:6px}
+.msg-ai ul{display:grid;gap:8px}
+.msg-ai li{display:flex;gap:10px;align-items:flex-start}
+.msg-ai li::before{content:"";flex:none;width:6px;height:6px;border-radius:50%;background:var(--blue);margin-top:.6em}
+.chat.swap .msg{animation:rise .5s cubic-bezier(.2,.8,.2,1) both}
+.chat.swap .msg-ai{animation-delay:.18s}
+.chat.swap .msg-ai li{animation:rise .45s cubic-bezier(.2,.8,.2,1) both}
+.chat.swap .msg-ai li:nth-child(1){animation-delay:.3s}
+.chat.swap .msg-ai li:nth-child(2){animation-delay:.4s}
+.chat.swap .msg-ai li:nth-child(3){animation-delay:.5s}
+@keyframes rise{from{opacity:0;transform:translateY(8px)}}
+.as-foot{display:flex;align-items:center;gap:10px;padding:10px 10px 10px 16px;border-radius:14px;box-shadow:inset 0 0 0 1px var(--line);color:var(--muted);font-size:14px}
+.as-foot span{flex:1}
+.as-foot .send{width:34px;height:34px;border-radius:10px;background:var(--navy);color:#fff;display:grid;place-items:center}
+.as-foot .send .ico{font-size:16px;stroke-width:2.2}
+.progress{height:2px;border-radius:2px;background:var(--line);overflow:hidden}
+.progress i{display:block;height:100%;width:100%;background:var(--blue);transform-origin:left;transform:scaleX(0)}
+.progress.run i{animation:bar var(--dur,4.2s) linear forwards}
+@keyframes bar{to{transform:scaleX(1)}}
+.float-tag{position:absolute;z-index:2;display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:14px;background:var(--surface);box-shadow:var(--shadow),inset 0 0 0 1px var(--line);font:500 12px/1.2 var(--f-mono);color:var(--ink-soft);animation:float 6s ease-in-out infinite}
+.float-tag b{color:var(--ink);font-weight:500}
+.float-tag .dot{width:8px;height:8px;border-radius:3px;background:var(--yellow)}
+.ft-1{left:-18px;bottom:64px}
+.ft-2{right:-14px;top:-18px;animation-delay:-3s}
+.ft-2 .dot{background:var(--green)}
+@keyframes float{50%{transform:translateY(-6px)}}
+@media (max-width:640px){.ft-1{left:-6px;bottom:-22px}.ft-2{right:-4px;top:-20px}.msg-you{margin-left:6%}}
+
+/* Pain */
+.pain{background:var(--surface);border-block:1px solid var(--line)}
+.quotes{display:grid;gap:16px}
+@media (min-width:640px){.quotes{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1000px){.quotes{grid-template-columns:repeat(3,1fr)}}
+.quote{position:relative;padding:26px 24px 24px 24px;border-radius:var(--r);background:var(--bg);box-shadow:inset 0 0 0 1px var(--line);font-size:17.5px;line-height:1.5;color:var(--ink);transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s,background-color .35s}
+.quote::before{content:"“";display:block;font:700 44px/0.6 var(--f-display);color:var(--blue);margin-bottom:12px;height:20px}
+.quote:hover{transform:translateY(-4px);background:var(--surface);box-shadow:var(--shadow),inset 0 0 0 1px var(--line)}
+.turn{margin-top:clamp(56px,8vw,88px);display:grid;gap:14px;max-width:880px}
+.turn p{font:600 clamp(1.6rem,3.6vw,2.6rem)/1.15 var(--f-display);letter-spacing:-.025em;text-wrap:balance}
+.turn p:first-child{color:var(--muted)}
+.turn mark{background:linear-gradient(transparent 62%,var(--yellow-soft) 62%);color:inherit;padding-inline:.06em}
+
+/* Promise */
+.uses{display:grid;gap:16px}
+@media (min-width:640px){.uses{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1000px){.uses{grid-template-columns:repeat(3,1fr)}}
+.use{position:relative;padding:28px;border-radius:var(--r-lg);background:var(--surface);box-shadow:inset 0 0 0 1px var(--line);display:grid;gap:14px;align-content:start;overflow:hidden;transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s}
+.use::after{content:"";position:absolute;inset:auto -40% -60% auto;width:220px;height:220px;border-radius:50%;background:radial-gradient(closest-side,var(--blue-soft),transparent);opacity:0;transition:opacity .4s}
+.use:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg),inset 0 0 0 1px var(--line)}
+.use:hover::after{opacity:1}
+.use-ico{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;background:var(--blue-soft);color:var(--blue-ink);font-size:23px;transition:transform .35s cubic-bezier(.2,.8,.2,1),background-color .35s,color .35s}
+.use:hover .use-ico{transform:rotate(-6deg) scale(1.06);background:var(--blue);color:#fff}
+.use h3{font:600 13px/1 var(--f-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--ink);margin-top:6px}
+.use p{color:var(--ink-soft);font-size:16.5px;position:relative;z-index:1}
+
+/* Timeline */
+.meetings{position:relative;display:grid;gap:18px;counter-reset:m}
+.meeting{position:relative;padding:28px 26px;border-radius:var(--r-lg);background:var(--surface);box-shadow:inset 0 0 0 1px var(--line);display:grid;gap:12px;align-content:start;transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s}
+.meeting:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg),inset 0 0 0 1px var(--line)}
+.m-top{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.m-num{font:500 12px/1 var(--f-mono);letter-spacing:.14em;color:var(--blue-ink);text-transform:uppercase}
+.m-time{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border-radius:999px;background:var(--green-soft);color:var(--green);font:600 12.5px/1 var(--f-mono)}
+.m-time .ico{font-size:14px;stroke-width:2.2}
+.m-big{font:700 64px/.9 var(--f-display);letter-spacing:-.05em;color:var(--surface-2);-webkit-text-stroke:1.5px var(--line);margin-block:4px}
+.meeting h3{font-size:1.45rem}
+.meeting p{color:var(--ink-soft);font-size:16px}
+@media (max-width:899px){
+  .meetings{padding-left:28px}
+  .meetings::before{content:"";position:absolute;left:7px;top:24px;bottom:24px;width:2px;background:linear-gradient(var(--blue),var(--line))}
+  .meeting::before{content:"";position:absolute;left:-28px;top:30px;width:16px;height:16px;border-radius:50%;background:var(--bg);box-shadow:inset 0 0 0 3px var(--blue)}
+}
+@media (min-width:900px){
+  .meetings{grid-template-columns:repeat(4,1fr);padding-top:36px}
+  .meetings::before{content:"";position:absolute;left:24px;right:24px;top:7px;height:2px;background:linear-gradient(90deg,var(--blue),var(--line))}
+  .meeting::before{content:"";position:absolute;left:26px;top:-36px;width:16px;height:16px;border-radius:50%;background:var(--bg);box-shadow:inset 0 0 0 3px var(--blue)}
+}
+.total-line{margin-top:28px;display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;color:var(--ink-soft);font-size:15.5px}
+.total-line b{font:600 15px/1 var(--f-mono);color:var(--ink);padding:8px 12px;border-radius:10px;background:var(--surface);box-shadow:inset 0 0 0 1px var(--line)}
+
+/* Method */
+.method{background:var(--navy);color:var(--on-navy);position:relative;overflow:hidden}
+.method::before{content:"";position:absolute;width:900px;height:900px;left:50%;top:-520px;transform:translateX(-50%);border-radius:50%;background:radial-gradient(closest-side,rgba(47,91,255,.35),transparent);pointer-events:none}
+.method .wrap{position:relative}
+.method .eyebrow{color:#9DB2FF}
+.method .h2{max-width:22ch;color:#fff}
+.method .h2 span{color:var(--on-navy-soft)}
+.method .lead{color:var(--on-navy-soft)}
+.m-grid{display:grid;gap:40px;align-items:start}
+@media (min-width:980px){.m-grid{grid-template-columns:.9fr 1.1fr;gap:64px}}
+.steps{display:grid;gap:0}
+.step{display:grid;grid-template-columns:44px 1fr;gap:16px;align-items:start;width:100%;text-align:left;padding:14px 16px 14px 14px;border:0;border-radius:16px;background:transparent;color:inherit;font:inherit;cursor:pointer;transition:background-color .25s}
+.step:hover,.step.on{background:rgba(255,255,255,.06)}
+.step-k{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;font:600 14px/1 var(--f-mono);background:rgba(255,255,255,.08);color:#fff;box-shadow:inset 0 0 0 1px rgba(255,255,255,.14);transition:background-color .25s,color .25s}
+.step.on .step-k{background:var(--c);color:var(--navy);box-shadow:none}
+.step b{display:block;font:600 14px/1.2 var(--f-mono);letter-spacing:.14em;color:#fff;margin-top:4px}
+.step span{display:block;color:var(--on-navy-soft);font-size:15.5px;margin-top:4px}
+.step-arrow{display:grid;grid-template-columns:44px 1fr;padding-left:14px;height:14px;color:rgba(255,255,255,.3)}
+.step-arrow::before{content:"";justify-self:center;width:1.5px;height:100%;background:currentColor}
+.promptcard{border-radius:var(--r-lg);background:#fff;color:#1F232B;padding:22px;box-shadow:0 40px 80px -30px rgba(0,0,0,.55)}
+.pc-top{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-bottom:16px;border-bottom:1px solid #E1E4EA;font:500 11.5px/1 var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:#6B7282}
+.pc-body{padding-top:16px;display:grid;gap:10px;font:400 15px/1.55 var(--f-mono)}
+.part{display:block;padding:10px 12px 10px 14px;border-radius:12px;border-left:3px solid var(--c);background:color-mix(in srgb,var(--c) 10%,transparent);transition:opacity .3s,transform .3s,background-color .3s}
+.part em{font-style:normal;font-weight:500;color:#0B1F4D;display:block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:2px}
+.pc-body.focus .part{opacity:.3}
+.pc-body.focus .part.on{opacity:1;transform:translateX(4px);background:color-mix(in srgb,var(--c) 18%,transparent)}
+.method-note{margin-top:22px;color:var(--on-navy-soft);font-size:15.5px;max-width:52ch}
+.c1{--c:#5B7FFF}.c2{--c:#3CCB8E}.c3{--c:#F4C23D}.c4{--c:#FF8A65}.c5{--c:#B69CFF}
+
+/* Practice */
+.p-grid{display:grid;gap:48px;align-items:start}
+@media (min-width:980px){.p-grid{grid-template-columns:1fr 1fr;gap:72px}}
+.split{margin-top:36px;display:grid;grid-template-columns:4fr 6fr;gap:8px}
+.split > div{border-radius:var(--r);padding:22px 20px;min-height:150px;display:flex;flex-direction:column;justify-content:space-between;gap:16px}
+.split .a{background:var(--surface);box-shadow:inset 0 0 0 1px var(--line)}
+.split .b{background:var(--blue);color:#fff;position:relative;overflow:hidden}
+.split .b::after{content:"";position:absolute;right:-40px;bottom:-60px;width:180px;height:180px;border-radius:50%;background:rgba(255,255,255,.12)}
+.split strong{font:700 clamp(2.6rem,6vw,3.8rem)/.9 var(--f-display);letter-spacing:-.04em}
+.split span{font:500 12px/1 var(--f-mono);letter-spacing:.14em;text-transform:uppercase}
+.split .a span{color:var(--muted)}
+.flow{display:grid;gap:0;counter-reset:f}
+.flow li{position:relative;display:flex;align-items:center;gap:16px;padding:16px 18px;border-radius:16px;background:var(--surface);box-shadow:inset 0 0 0 1px var(--line);font-size:17px;font-weight:500;transition:transform .3s cubic-bezier(.2,.8,.2,1),box-shadow .3s}
+.flow li:hover{transform:translateX(6px);box-shadow:var(--shadow),inset 0 0 0 1px var(--line)}
+.flow li + li{margin-top:22px}
+.flow li + li::before{content:"";position:absolute;left:41px;top:-22px;height:22px;width:1.5px;background:var(--line)}
+.flow .fi{width:46px;height:46px;flex:none;border-radius:13px;display:grid;place-items:center;background:var(--surface-2);color:var(--navy);font-size:21px}
+:root[data-theme="dark"] .flow .fi{color:var(--blue-ink)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .flow .fi{color:var(--blue-ink)}}
+.flow .tag{margin-left:auto;font:500 11px/1 var(--f-mono);letter-spacing:.1em;color:var(--muted);text-transform:uppercase}
+
+/* Deliverables */
+.take{background:var(--surface);border-block:1px solid var(--line)}
+.t-grid{display:grid;gap:40px;align-items:start}
+@media (min-width:980px){.t-grid{grid-template-columns:1.15fr .85fr;gap:56px}}
+.checks{display:grid;gap:10px}
+@media (min-width:640px){.checks{grid-template-columns:1fr 1fr}}
+.checks li{display:flex;gap:12px;align-items:flex-start;padding:16px 18px;border-radius:14px;background:var(--bg);font-size:16px;line-height:1.45;transition:background-color .25s}
+.checks li:hover{background:var(--surface-2)}
+.ck{width:24px;height:24px;flex:none;border-radius:8px;display:grid;place-items:center;background:var(--green);color:#fff;font-size:14px;margin-top:-1px}
+.ck .ico{stroke-width:2.8}
+.checks li.wide{grid-column:1/-1}
+.kit{position:sticky;top:calc(var(--nav-h) + 24px);border-radius:var(--r-lg);background:var(--navy);color:var(--on-navy);padding:30px;overflow:hidden;box-shadow:var(--shadow-lg)}
+.kit::before{content:"";position:absolute;width:360px;height:360px;right:-140px;top:-160px;border-radius:50%;background:radial-gradient(closest-side,rgba(47,91,255,.55),transparent)}
+.kit > *{position:relative}
+.kit-badge{display:inline-flex;align-items:center;gap:8px;padding:7px 12px;border-radius:999px;background:var(--yellow);color:#1F232B;font:600 11.5px/1 var(--f-mono);letter-spacing:.12em;text-transform:uppercase}
+.kit h3{margin-top:22px;font-size:clamp(1.9rem,3.4vw,2.4rem);color:#fff;letter-spacing:-.03em}
+.kit p{margin-top:10px;color:var(--on-navy-soft)}
+.kit-doc{margin-top:28px;display:grid;gap:8px}
+.kit-doc div{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 16px;border-radius:12px;background:rgba(255,255,255,.07);box-shadow:inset 0 0 0 1px rgba(255,255,255,.1);font-size:15px;transition:background-color .25s,transform .25s}
+.kit-doc div:hover{background:rgba(255,255,255,.12);transform:translateX(4px)}
+.kit-doc small{font:500 11px/1 var(--f-mono);letter-spacing:.1em;color:var(--on-navy-soft);text-transform:uppercase}
+
+/* Fit */
+.fit{display:grid;gap:18px}
+@media (min-width:900px){.fit{grid-template-columns:1.2fr .8fr}}
+.fit-card{border-radius:var(--r-lg);padding:clamp(26px,4vw,40px);display:grid;gap:26px;align-content:start}
+.fit-yes{background:var(--surface);box-shadow:var(--shadow),inset 0 0 0 1px var(--line)}
+.fit-no{background:transparent;box-shadow:inset 0 0 0 1.5px var(--line)}
+.fit-card h2{font-size:clamp(1.7rem,3.2vw,2.3rem)}
+.fit-no h2{color:var(--ink-soft)}
+.fit-list{display:grid;gap:14px}
+.fit-list li{display:flex;gap:14px;align-items:flex-start;font-size:17px;line-height:1.45}
+.fit-no .fit-list li{color:var(--ink-soft);font-size:16px}
+.xk{width:24px;height:24px;flex:none;border-radius:8px;display:grid;place-items:center;background:var(--surface-2);color:var(--muted);font-size:13px;margin-top:0}
+.xk .ico{stroke-width:2.6}
+
+/* Format */
+.format-card{border-radius:var(--r-lg);background:var(--surface);box-shadow:var(--shadow-lg),inset 0 0 0 1px var(--line);overflow:hidden;display:grid}
+@media (min-width:900px){.format-card{grid-template-columns:1.1fr .9fr}}
+.fc-main{padding:clamp(28px,4vw,44px);display:grid;gap:28px;align-content:start}
+.fc-main .pill{justify-self:start}
+.facts{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border-radius:var(--r);overflow:hidden;box-shadow:0 0 0 1px var(--line)}
+@media (min-width:560px){.facts{grid-template-columns:repeat(3,1fr)}}
+.fact{background:var(--surface);padding:20px 18px;display:grid;gap:4px}
+.fact b{font:700 clamp(1.6rem,3vw,2rem)/1 var(--f-display);letter-spacing:-.03em;color:var(--navy)}
+:root[data-theme="dark"] .fact b{color:var(--ink)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .fact b{color:var(--ink)}}
+.fact span{font-size:14px;color:var(--muted)}
+.fc-side{background:var(--surface-2);padding:clamp(28px,4vw,44px);display:grid;gap:14px;align-content:start}
+.fc-side h3{font:500 12px/1 var(--f-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.row{display:flex;gap:14px;align-items:center;padding:14px 16px;border-radius:14px;background:var(--surface);box-shadow:inset 0 0 0 1px var(--line)}
+.row-ico{width:40px;height:40px;flex:none;border-radius:11px;display:grid;place-items:center;background:var(--blue-soft);color:var(--blue-ink);font-size:19px}
+.row div{display:grid;gap:4px;min-width:0}
+.row small{font-size:13px;color:var(--muted)}
+.fc-side .btn{margin-top:10px;width:100%}
+
+/* Final CTA */
+.final{padding-block:clamp(24px,4vw,40px) clamp(80px,10vw,120px)}
+.final-box{position:relative;overflow:hidden;border-radius:clamp(24px,4vw,40px);background:var(--navy);color:var(--on-navy);padding:clamp(48px,8vw,104px) clamp(24px,6vw,80px);display:grid;gap:26px;justify-items:start}
+.final-box::before{content:"";position:absolute;width:820px;height:820px;right:-300px;top:-360px;border-radius:50%;background:radial-gradient(closest-side,rgba(47,91,255,.6),transparent);pointer-events:none}
+.final-box::after{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.08) 1px,transparent 1px);background-size:22px 22px;mask-image:linear-gradient(90deg,transparent 30%,#000);-webkit-mask-image:linear-gradient(90deg,transparent 30%,#000);pointer-events:none}
+.final-box > *{position:relative;z-index:1}
+.final-box .eyebrow{color:#9DB2FF}
+.final-box h2{font-size:clamp(2.2rem,5.6vw,4.3rem);color:#fff;max-width:17ch;letter-spacing:-.04em;line-height:1}
+.final-box h2 span{color:var(--on-navy-soft)}
+.final-box p{color:var(--on-navy-soft);font-size:clamp(1.05rem,1.6vw,1.2rem);max-width:50ch}
+.final-note{font:500 12px/1.4 var(--f-mono);letter-spacing:.06em;color:var(--on-navy-soft)}
+
+/* FAQ */
+.faq-grid{display:grid;gap:40px}
+@media (min-width:980px){.faq-grid{grid-template-columns:.8fr 1.2fr;gap:64px}}
+.faq-list{display:grid;gap:10px}
+.faq{border-radius:var(--r);background:var(--surface);box-shadow:inset 0 0 0 1px var(--line);transition:box-shadow .3s}
+.faq[open]{box-shadow:var(--shadow),inset 0 0 0 1px var(--line)}
+.faq summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:20px 22px;font:600 17px/1.35 var(--f-body);border-radius:var(--r)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:hover{color:var(--blue-ink)}
+.faq-ico{width:32px;height:32px;flex:none;border-radius:50%;display:grid;place-items:center;background:var(--surface-2);color:var(--ink);font-size:16px;transition:transform .35s cubic-bezier(.2,.8,.2,1),background-color .3s,color .3s}
+.faq-ico .ico{stroke-width:2.2}
+.faq[open] .faq-ico{transform:rotate(45deg);background:var(--blue);color:#fff}
+.faq-a{padding:0 22px 22px;color:var(--ink-soft);font-size:16px;max-width:62ch;display:grid;gap:10px}
+.faq[open] .faq-a{animation:rise .4s cubic-bezier(.2,.8,.2,1)}
+
+/* Footer */
+.footer{border-top:1px solid var(--line);padding-block:56px 40px}
+.f-grid{display:grid;gap:32px}
+@media (min-width:800px){.f-grid{grid-template-columns:1.4fr 1fr;align-items:end}}
+.footer p{margin-top:14px;color:var(--ink-soft);max-width:44ch}
+.f-links{display:flex;flex-wrap:wrap;gap:10px}
+@media (min-width:800px){.f-links{justify-content:flex-end}}
+.f-links a{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:999px;box-shadow:inset 0 0 0 1px var(--line);text-decoration:none;font-size:15px;color:var(--ink-soft);transition:box-shadow .25s,color .25s,transform .25s}
+.f-links a:hover{color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink);transform:translateY(-2px)}
+.f-links .ico{font-size:17px}
+.f-bottom{margin-top:40px;padding-top:24px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:13.5px;color:var(--muted)}
+
+/* Mobile sticky CTA */
+.mbar{position:fixed;left:0;right:0;bottom:0;z-index:50;padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px));background:color-mix(in srgb,var(--surface) 90%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid var(--line);display:flex;align-items:center;gap:12px;transform:translateY(110%);transition:transform .4s cubic-bezier(.2,.8,.2,1)}
+.mbar.show{transform:none}
+.mbar-txt{flex:1;min-width:0;font-size:13px;line-height:1.3;color:var(--muted)}
+.mbar-txt b{display:block;color:var(--ink);font:600 15px/1.2 var(--f-display)}
+.mbar .btn{min-height:46px;padding:0 18px;font-size:12.5px;flex:none}
+@media (min-width:760px){.mbar{display:none}}
+@media (max-width:759px){.footer{padding-bottom:calc(110px + env(safe-area-inset-bottom,0px))}}
+
+/* Reveal */
+.js .rv.pre{opacity:0;transform:translateY(22px)}
+.js .rv{transition:opacity .8s cubic-bezier(.2,.8,.2,1),transform .8s cubic-bezier(.2,.8,.2,1);transition-delay:var(--d,0s)}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
+  .js .rv.pre{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 5v14M6 13l6 6 6-6"/></symbol>
+    <symbol id="i-org" viewBox="0 0 24 24"><path d="M4 6.5l1.5 1.5L8.5 5M4 12.5l1.5 1.5 3-3M4 18.5l1.5 1.5 3-3M12 7h8M12 13h8M12 19h8"/></symbol>
+    <symbol id="i-ana" viewBox="0 0 24 24"><path d="M3 20h18M7 16v-5M12 16V6M17 16v-8"/></symbol>
+    <symbol id="i-think" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.6 10.8c.7.5 1.1 1.3 1.1 2.1V16h5v-.1c0-.8.4-1.6 1.1-2.1A6 6 0 0 0 12 3z"/></symbol>
+    <symbol id="i-write" viewBox="0 0 24 24"><path d="M4 20h4L19 9a2.8 2.8 0 0 0-4-4L4 16v4zM13.5 6.5l4 4"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></symbol>
+    <symbol id="i-create" viewBox="0 0 24 24"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8zM18.5 15.5l.7 1.8 1.8.7-1.8.7-.7 1.8-.7-1.8-1.8-.7 1.8-.7z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M7 7l10 10M17 7L7 17"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="4.5" width="18" height="16" rx="3"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/></symbol>
+    <symbol id="i-screen" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2.5"/><path d="M8 20h8M12 16v4"/></symbol>
+    <symbol id="i-tag" viewBox="0 0 24 24"><path d="M3 12V4.5A1.5 1.5 0 0 1 4.5 3H12l9 9-9 9z"/><circle cx="7.5" cy="7.5" r="1.3"/></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></symbol>
+    <symbol id="i-ig" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></symbol>
+    <symbol id="i-in" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M8 10.5V17M8 7.2v.01M12 17v-3.5a2.5 2.5 0 0 1 5 0V17M12 10.5V17"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 7l8.5 6 8.5-6"/></symbol>
+  </defs>
+</svg>
+
+<header class="nav" id="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="IA na Vida Real, voltar ao início"><span class="brand-mark" aria-hidden="true"></span>IA na Vida Real</a>
+    <nav class="nav-links" aria-label="Seções">
+      <a href="#conteudo">Conteúdo</a>
+      <a href="#metodo">Método</a>
+      <a href="#formato">Formato</a>
+      <a href="#faq">Dúvidas</a>
+    </nav>
+    <a class="btn" href="#inscricao">Quero aprender IA</a>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="pill"><span class="live">Curso online ao vivo</span><i aria-hidden="true">•</i><span>6 horas</span><i aria-hidden="true">•</i><span>Nível iniciante</span></p>
+      <h1 id="hero-title">IA na <span class="hl">Vida Real<svg viewBox="0 0 300 20" preserveAspectRatio="none" aria-hidden="true"><path d="M4 14 C 80 4, 200 4, 296 12"/></svg></span></h1>
+      <p class="hero-sub">Aprenda a usar Inteligência Artificial para organizar sua vida, estruturar ideias, escrever melhor, pesquisar, analisar informações e criar.</p>
+      <p class="hero-comp">Em 4 encontros práticos, você vai aprender a transformar a IA em uma ferramenta útil para as tarefas que já fazem parte da sua rotina.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-lg" href="#inscricao">Quero aprender IA <svg class="ico"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-lg btn-ghost" href="#conteudo">Ver o conteúdo do curso <svg class="ico"><use href="#i-down"/></svg></a>
+      </div>
+      <div class="hero-meta">
+        <span><svg class="ico"><use href="#i-check"/></svg>4 encontros de 1h30</span>
+        <span><svg class="ico"><use href="#i-check"/></svg>Sem conhecimento técnico</span>
+        <span><svg class="ico"><use href="#i-check"/></svg>Aprenda fazendo</span>
+      </div>
+    </div>
+
+    <div class="stage">
+      <div class="assistant" id="assistant">
+        <div class="as-top"><b>Seu assistente</b><span class="as-status">Pronto para ajudar</span></div>
+        <div class="verbs" role="group" aria-label="Exemplos de uso da IA">
+          <button class="verb" type="button" data-i="0" aria-pressed="true"><svg class="ico"><use href="#i-org"/></svg>Organizar</button>
+          <span class="verb-sep" aria-hidden="true"><svg class="ico"><use href="#i-arrow"/></svg></span>
+          <button class="verb" type="button" data-i="1" aria-pressed="false"><svg class="ico"><use href="#i-think"/></svg>Pensar</button>
+          <span class="verb-sep" aria-hidden="true"><svg class="ico"><use href="#i-arrow"/></svg></span>
+          <button class="verb" type="button" data-i="2" aria-pressed="false"><svg class="ico"><use href="#i-search"/></svg>Pesquisar</button>
+          <span class="verb-sep" aria-hidden="true"><svg class="ico"><use href="#i-arrow"/></svg></span>
+          <button class="verb" type="button" data-i="3" aria-pressed="false"><svg class="ico"><use href="#i-write"/></svg>Escrever</button>
+          <span class="verb-sep" aria-hidden="true"><svg class="ico"><use href="#i-arrow"/></svg></span>
+          <button class="verb" type="button" data-i="4" aria-pressed="false"><svg class="ico"><use href="#i-create"/></svg>Criar</button>
+          <span class="verb-sep" aria-hidden="true"><svg class="ico"><use href="#i-arrow"/></svg></span>
+          <button class="verb" type="button" data-i="5" aria-pressed="false"><svg class="ico"><use href="#i-ana"/></svg>Analisar</button>
+        </div>
+        <div class="chat" id="chat" aria-live="polite">
+          <div class="msg msg-you"><small>Você</small><span id="q">Tenho 12 tarefas para esta semana e pouco tempo. Me ajude a dividir por prioridade e por dia.</span></div>
+          <div class="msg msg-ai"><small>IA</small><ul id="a"><li>Segunda: as 3 tarefas com prazo mais próximo.</li><li>Terça e quarta: blocos de 2h para o projeto principal.</li><li>Sexta: revisão da semana e pendências menores.</li></ul></div>
+        </div>
+        <div class="progress" id="progress"><i></i></div>
+        <div class="as-foot" aria-hidden="true"><span>Contexto + objetivo + formato…</span><span class="send"><svg class="ico"><use href="#i-send"/></svg></span></div>
+      </div>
+      <div class="float-tag ft-2" aria-hidden="true"><span class="dot"></span><b>Sem jargão técnico</b></div>
+      <div class="float-tag ft-1" aria-hidden="true"><span class="dot"></span>Tarefas <b>da sua rotina</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- DOR -->
+<section class="section pain" aria-labelledby="pain-title">
+  <div class="wrap">
+    <div class="head rv">
+      <p class="eyebrow">Parece familiar?</p>
+      <h2 class="h2" id="pain-title">Você já tentou usar IA, mas sente que ainda não sabe realmente como usar?</h2>
+    </div>
+    <ul class="quotes">
+      <li class="quote rv">Eu abro o ChatGPT e não sei o que perguntar.</li>
+      <li class="quote rv" style="--d:.06s">Às vezes a resposta parece genérica demais.</li>
+      <li class="quote rv" style="--d:.12s">Eu sei que poderia economizar tempo, mas não sei por onde começar.</li>
+      <li class="quote rv">Tenho várias ideias, mas dificuldade para organizá-las.</li>
+      <li class="quote rv" style="--d:.06s">Tenho medo de confiar em uma resposta errada.</li>
+      <li class="quote rv" style="--d:.12s">Vejo pessoas usando IA para tudo, mas não sei como trazer isso para a minha rotina.</li>
+    </ul>
+    <div class="turn rv">
+      <p>O problema não é ter acesso à IA.</p>
+      <p>É <mark>saber conversar com ela</mark> e incorporá-la à sua rotina.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PROMESSA -->
+<section class="section" aria-labelledby="promise-title">
+  <div class="wrap">
+    <div class="head rv">
+      <p class="eyebrow">O que muda</p>
+      <h2 class="h2" id="promise-title">Imagine ter um assistente para pensar junto com você.</h2>
+    </div>
+    <ul class="uses">
+      <li class="use rv"><span class="use-ico"><svg class="ico"><use href="#i-org"/></svg></span><h3>Organizar</h3><p>Planeje sua semana, tarefas, projetos e rotina.</p></li>
+      <li class="use rv" style="--d:.06s"><span class="use-ico"><svg class="ico"><use href="#i-ana"/></svg></span><h3>Analisar</h3><p>Entenda seus gastos, dados, planilhas e cenários.</p></li>
+      <li class="use rv" style="--d:.12s"><span class="use-ico"><svg class="ico"><use href="#i-think"/></svg></span><h3>Pensar</h3><p>Organize ideias, faça brainstorming e questione decisões.</p></li>
+      <li class="use rv"><span class="use-ico"><svg class="ico"><use href="#i-write"/></svg></span><h3>Escrever</h3><p>Revise, melhore e transforme textos.</p></li>
+      <li class="use rv" style="--d:.06s"><span class="use-ico"><svg class="ico"><use href="#i-search"/></svg></span><h3>Pesquisar</h3><p>Explore temas, compare informações e encontre referências.</p></li>
+      <li class="use rv" style="--d:.12s"><span class="use-ico"><svg class="ico"><use href="#i-create"/></svg></span><h3>Criar</h3><p>Gere imagens, conceitos e novos formatos de conteúdo.</p></li>
+    </ul>
+  </div>
+</section>
+
+<!-- COMO FUNCIONA -->
+<section class="section" id="conteudo" aria-labelledby="how-title" style="padding-top:0">
+  <div class="wrap">
+    <div class="head rv">
+      <p class="eyebrow">Como funciona</p>
+      <h2 class="h2" id="how-title">4 encontros para colocar IA na sua rotina</h2>
+    </div>
+    <ol class="meetings">
+      <li class="meeting rv">
+        <div class="m-top"><span class="m-num">Encontro 01</span><span class="m-time"><svg class="ico"><use href="#i-clock"/></svg>1h30</span></div>
+        <span class="m-big" aria-hidden="true">01</span>
+        <h3>Começando com IA</h3>
+        <p>Como conversar com uma IA, criar bons prompts e entender suas possibilidades e limitações.</p>
+      </li>
+      <li class="meeting rv" style="--d:.08s">
+        <div class="m-top"><span class="m-num">Encontro 02</span><span class="m-time"><svg class="ico"><use href="#i-clock"/></svg>1h30</span></div>
+        <span class="m-big" aria-hidden="true">02</span>
+        <h3>IA como assistente pessoal</h3>
+        <p>Organização pessoal, organização financeira e estruturação de ideias.</p>
+      </li>
+      <li class="meeting rv" style="--d:.16s">
+        <div class="m-top"><span class="m-num">Encontro 03</span><span class="m-time"><svg class="ico"><use href="#i-clock"/></svg>1h30</span></div>
+        <span class="m-big" aria-hidden="true">03</span>
+        <h3>IA para escrever e criar</h3>
+        <p>Revisão de textos, produção de conteúdo e geração de imagens.</p>
+      </li>
+      <li class="meeting rv" style="--d:.24s">
+        <div class="m-top"><span class="m-num">Encontro 04</span><span class="m-time"><svg class="ico"><use href="#i-clock"/></svg>1h30</span></div>
+        <span class="m-big" aria-hidden="true">04</span>
+        <h3>IA para pesquisar e analisar</h3>
+        <p>Pesquisa, análise de documentos e dados, contrapontos e tomada de decisão.</p>
+      </li>
+    </ol>
+    <p class="total-line rv"><b>4 × 1h30 = 6 horas</b> ao vivo, com espaço para praticar e tirar dúvidas.</p>
+  </div>
+</section>
+
+<!-- MÉTODO -->
+<section class="section method" id="metodo" aria-labelledby="method-title">
+  <div class="wrap">
+    <div class="head rv">
+      <p class="eyebrow">O método</p>
+      <h2 class="h2" id="method-title">Você não vai decorar centenas de prompts. <span>Você vai aprender a pensar em conjunto com a IA.</span></h2>
+      <p class="lead">O curso ensina uma lógica simples, em cinco partes, para construir pedidos melhores e receber respostas mais úteis. Funciona para qualquer tarefa e qualquer ferramenta.</p>
+    </div>
+    <div class="m-grid">
+      <div class="steps rv" role="group" aria-label="As cinco partes de um bom pedido">
+        <button class="step c1" type="button" data-p="1"><span class="step-k">C</span><span><b>CONTEXTO</b><span>Quem é você e qual é a situação.</span></span></button>
+        <div class="step-arrow" aria-hidden="true"></div>
+        <button class="step c2" type="button" data-p="2"><span class="step-k">O</span><span><b>OBJETIVO</b><span>O que você quer alcançar com a resposta.</span></span></button>
+        <div class="step-arrow" aria-hidden="true"></div>
+        <button class="step c3" type="button" data-p="3"><span class="step-k">R</span><span><b>REFERÊNCIAS</b><span>Materiais, exemplos e informações que a IA deve considerar.</span></span></button>
+        <div class="step-arrow" aria-hidden="true"></div>
+        <button class="step c4" type="button" data-p="4"><span class="step-k">R</span><span><b>RESTRIÇÕES</b><span>Limites, cuidados e o que evitar.</span></span></button>
+        <div class="step-arrow" aria-hidden="true"></div>
+        <button class="step c5" type="button" data-p="5"><span class="step-k">F</span><span><b>FORMATO</b><span>Como você quer receber a resposta.</span></span></button>
+      </div>
+      <div class="rv" style="--d:.1s">
+        <div class="promptcard">
+          <div class="pc-top"><span>Exemplo de pedido</span><span>5 partes</span></div>
+          <div class="pc-body" id="pc">
+            <span class="part c1" data-p="1"><em>Contexto</em>Trabalho em uma equipe pequena e minha semana tem muitas reuniões.</span>
+            <span class="part c2" data-p="2"><em>Objetivo</em>Quero organizar minhas tarefas para não deixar nada importante para sexta.</span>
+            <span class="part c3" data-p="3"><em>Referências</em>Esta é minha lista de tarefas e os horários das reuniões: […]</span>
+            <span class="part c4" data-p="4"><em>Restrições</em>Tenho no máximo 2 horas livres por dia e não trabalho depois das 18h.</span>
+            <span class="part c5" data-p="5"><em>Formato</em>Responda com uma tabela por dia e as 3 prioridades de cada dia.</span>
+          </div>
+        </div>
+        <p class="method-note">Compare com “organize minha semana”. A diferença entre uma resposta genérica e uma resposta útil está no pedido.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRÁTICA -->
+<section class="section" aria-labelledby="practice-title">
+  <div class="wrap p-grid">
+    <div class="rv">
+      <p class="eyebrow">Muito prático</p>
+      <h2 class="h2" id="practice-title" style="margin-top:18px">Menos teoria. Mais mão na massa.</h2>
+      <p class="lead" style="margin-top:18px">Durante as aulas, você vai trabalhar com situações reais e aprender fazendo.</p>
+      <div class="split" role="img" aria-label="Divisão das aulas: 40% conceitos e 60% prática">
+        <div class="a"><span>Conceitos</span><strong>40%</strong></div>
+        <div class="b"><span>Prática</span><strong>60%</strong></div>
+      </div>
+    </div>
+    <ol class="flow">
+      <li class="rv"><span class="fi"><svg class="ico"><use href="#i-cal"/></svg></span>Organizar uma semana</li>
+      <li class="rv" style="--d:.05s"><span class="fi"><svg class="ico"><use href="#i-ana"/></svg></span>Analisar uma planilha</li>
+      <li class="rv" style="--d:.1s"><span class="fi"><svg class="ico"><use href="#i-write"/></svg></span>Revisar um texto</li>
+      <li class="rv" style="--d:.15s"><span class="fi"><svg class="ico"><use href="#i-create"/></svg></span>Criar uma imagem</li>
+      <li class="rv" style="--d:.2s"><span class="fi"><svg class="ico"><use href="#i-search"/></svg></span>Pesquisar um tema</li>
+      <li class="rv" style="--d:.25s"><span class="fi"><svg class="ico"><use href="#i-think"/></svg></span>Estruturar uma decisão</li>
+    </ol>
+  </div>
+</section>
+
+<!-- O QUE VOCÊ LEVA -->
+<section class="section take" aria-labelledby="take-title">
+  <div class="wrap">
+    <div class="head rv">
+      <p class="eyebrow">O que você vai levar</p>
+      <h2 class="h2" id="take-title" style="max-width:24ch">Ao final do curso, você terá muito mais do que conhecimento sobre IA.</h2>
+    </div>
+    <div class="t-grid">
+      <ul class="checks">
+        <li class="rv"><span class="ck"><svg class="ico"><use href="#i-check"/></svg></span>Método para criar prompts melhores</li>
+        <li class="rv"><span class="ck"><svg class="ico"><use href="#i-check"/></svg></span>+30 prompts práticos</li>
+        <li class="rv"><span class="ck"><svg class="ico"><use href="#i-check"/></svg></span>Técnicas de organização pessoal</li>
+        <li class="rv"><span class="ck"><svg class="ico"><use href="#i-check"/></svg></span>Técnicas de organização financeira</li>
+        <li class="rv"><span class="ck"><svg class="ico"><use href="#i-check"/></svg></span>Frameworks para organizar ideias</li>
+        <li class="rv"><span class="ck"><svg class="ico"><use href="#i-check"/></svg></span>Técnicas de revisão e produção de textos</li>
+        <li class="rv"><span class="ck"><svg class="ico"><use href="#i-check"/></svg></span>Técnicas para geração de imagens</li>
+        <li class="rv"><span class="ck"><svg class="ico"><use href="#i-check"/></svg></span>Métodos de pesquisa e análise</li>
+        <li class="rv wide"><span class="ck"><svg class="ico"><use href="#i-check"/></svg></span>Experiência prática com problemas reais</li>
+      </ul>
+      <aside class="kit rv" aria-labelledby="kit-title">
+        <span class="kit-badge">Incluso</span>
+        <h3 id="kit-title">Kit IA na Vida Real</h3>
+        <p>Um material de apoio para continuar usando depois do curso.</p>
+        <div class="kit-doc">
+          <div>O método em 5 partes <small>Guia</small></div>
+          <div>+30 prompts práticos <small>Biblioteca</small></div>
+          <div>Frameworks e técnicas <small>Referência</small></div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- PARA QUEM É / NÃO É -->
+<section class="section" aria-label="Para quem é o curso">
+  <div class="wrap fit">
+    <div class="fit-card fit-yes rv">
+      <h2>Esse curso é para você se…</h2>
+      <ul class="fit-list">
+        <li><span class="ck"><svg class="ico"><use href="#i-check"/></svg></span>Você está começando agora com IA.</li>
+        <li><span class="ck"><svg class="ico"><use href="#i-check"/></svg></span>Você já usa ChatGPT, mas sente que poderia aproveitar muito mais.</li>
+        <li><span class="ck"><svg class="ico"><use href="#i-check"/></svg></span>Você quer ganhar tempo em tarefas do cotidiano.</li>
+        <li><span class="ck"><svg class="ico"><use href="#i-check"/></svg></span>Você trabalha com conhecimento, informação, comunicação ou gestão.</li>
+        <li><span class="ck"><svg class="ico"><use href="#i-check"/></svg></span>Você quer aprender de forma prática.</li>
+        <li><span class="ck"><svg class="ico"><use href="#i-check"/></svg></span>Você não é uma pessoa técnica, e não precisa ser.</li>
+      </ul>
+    </div>
+    <div class="fit-card fit-no rv" style="--d:.08s">
+      <h2>E talvez esse não seja o curso certo se…</h2>
+      <ul class="fit-list">
+        <li><span class="xk"><svg class="ico"><use href="#i-x"/></svg></span>Você procura programação ou desenvolvimento de modelos de IA.</li>
+        <li><span class="xk"><svg class="ico"><use href="#i-x"/></svg></span>Você quer aprender machine learning ou ciência de dados.</li>
+        <li><span class="xk"><svg class="ico"><use href="#i-x"/></svg></span>Você procura uma formação técnica avançada.</li>
+        <li><span class="xk"><svg class="ico"><use href="#i-x"/></svg></span>Você quer apenas assistir a aulas sem colocar a mão na massa.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- FORMATO -->
+<section class="section" id="formato" aria-labelledby="format-title" style="padding-top:0">
+  <div class="wrap">
+    <div class="head rv">
+      <p class="eyebrow">Formato</p>
+      <h2 class="h2" id="format-title">Tudo o que você precisa saber para participar.</h2>
+    </div>
+    <div class="format-card rv" id="inscricao">
+      <div class="fc-main">
+        <p class="pill"><span class="live">Online ao vivo</span></p>
+        <div class="facts">
+          <div class="fact"><b>4</b><span>encontros</span></div>
+          <div class="fact"><b>1h30</b><span>por encontro</span></div>
+          <div class="fact"><b>6h</b><span>totais</span></div>
+          <div class="fact"><b>Iniciante</b><span>nível</span></div>
+          <div class="fact"><b>100%</b><span>prático</span></div>
+          <div class="fact"><b>Ao vivo</b><span>com interação</span></div>
+        </div>
+      </div>
+      <div class="fc-side">
+        <h3>Próxima turma</h3>
+        <div class="row"><span class="row-ico"><svg class="ico"><use href="#i-cal"/></svg></span><div><small>Datas</small><span class="ph">[INSERIR DATAS]</span></div></div>
+        <div class="row"><span class="row-ico"><svg class="ico"><use href="#i-clock"/></svg></span><div><small>Horário</small><span class="ph">[INSERIR HORÁRIO]</span></div></div>
+        <div class="row"><span class="row-ico"><svg class="ico"><use href="#i-screen"/></svg></span><div><small>Plataforma</small><span class="ph">[INSERIR PLATAFORMA]</span></div></div>
+        <div class="row"><span class="row-ico"><svg class="ico"><use href="#i-tag"/></svg></span><div><small>Investimento</small><span class="ph">[INSERIR PREÇO E CONDIÇÕES]</span></div></div>
+        <!-- [INSERIR LINK DE INSCRIÇÃO] no href abaixo -->
+        <a class="btn btn-lg" href="#" data-inscricao>Quero aprender IA <svg class="ico"><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="final" id="cta-final" aria-labelledby="cta-title">
+  <div class="wrap">
+    <div class="final-box rv">
+      <p class="eyebrow">Comece agora</p>
+      <h2 id="cta-title">A IA já faz parte do mundo. <span>Agora falta ela fazer parte da sua rotina.</span></h2>
+      <p>Aprenda a usar IA de forma simples, prática e aplicável às situações que você realmente enfrenta.</p>
+      <!-- [INSERIR LINK DE INSCRIÇÃO] no href abaixo -->
+      <a class="btn btn-lg btn-light" href="#" data-inscricao>Quero aprender IA <svg class="ico"><use href="#i-arrow"/></svg></a>
+      <p class="final-note">4 encontros ao vivo · 1h30 cada · nível iniciante</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" id="faq" aria-labelledby="faq-title" style="padding-top:clamp(40px,6vw,72px)">
+  <div class="wrap faq-grid">
+    <div class="head rv" style="align-content:start">
+      <p class="eyebrow">Dúvidas frequentes</p>
+      <h2 class="h2" id="faq-title">Perguntas antes de começar</h2>
+      <p class="lead">Não encontrou sua dúvida? Fale com a gente pelo <a href="#contato">contato</a>.</p>
+    </div>
+    <div class="faq-list">
+      <details class="faq rv" name="faq">
+        <summary>Preciso já saber usar ChatGPT?<span class="faq-ico"><svg class="ico"><use href="#i-plus"/></svg></span></summary>
+        <div class="faq-a"><p>Não. O curso começa do zero, com como conversar com uma IA e como fazer bons pedidos. Se você já usa, vai aprender a aproveitar muito mais.</p></div>
+      </details>
+      <details class="faq rv" name="faq">
+        <summary>Preciso pagar alguma ferramenta de IA?<span class="faq-ico"><svg class="ico"><use href="#i-plus"/></svg></span></summary>
+        <div class="faq-a"><p><span class="ph">[INSERIR: confirmar se as versões gratuitas das ferramentas são suficientes para acompanhar o curso]</span></p></div>
+      </details>
+      <details class="faq rv" name="faq">
+        <summary>O curso é ao vivo?<span class="faq-ico"><svg class="ico"><use href="#i-plus"/></svg></span></summary>
+        <div class="faq-a"><p>Sim. São 4 encontros online e ao vivo, de 1h30 cada, somando 6 horas. Datas e horário: <span class="ph">[INSERIR DATAS E HORÁRIO]</span>.</p></div>
+      </details>
+      <details class="faq rv" name="faq">
+        <summary>As aulas ficam gravadas?<span class="faq-ico"><svg class="ico"><use href="#i-plus"/></svg></span></summary>
+        <div class="faq-a"><p><span class="ph">[INSERIR: informar se haverá gravação e por quanto tempo ficará disponível]</span></p></div>
+      </details>
+      <details class="faq rv" name="faq">
+        <summary>Preciso ter conhecimento técnico?<span class="faq-ico"><svg class="ico"><use href="#i-plus"/></svg></span></summary>
+        <div class="faq-a"><p>Não. O curso foi pensado para quem não é da área de tecnologia. Não há programação e a linguagem é simples do começo ao fim.</p></div>
+      </details>
+      <details class="faq rv" name="faq">
+        <summary>Quais ferramentas serão utilizadas?<span class="faq-ico"><svg class="ico"><use href="#i-plus"/></svg></span></summary>
+        <div class="faq-a"><p><span class="ph">[INSERIR LISTA DE FERRAMENTAS]</span></p><p>O método ensinado vale para qualquer ferramenta de IA conversacional, não só para uma específica.</p></div>
+      </details>
+      <details class="faq rv" name="faq">
+        <summary>Vou receber os prompts utilizados?<span class="faq-ico"><svg class="ico"><use href="#i-plus"/></svg></span></summary>
+        <div class="faq-a"><p>Sim. Os prompts práticos fazem parte do Kit IA na Vida Real, o material de apoio para você continuar usando depois do curso.</p></div>
+      </details>
+      <details class="faq rv" name="faq">
+        <summary>Posso aplicar o conteúdo no trabalho?<span class="faq-ico"><svg class="ico"><use href="#i-plus"/></svg></span></summary>
+        <div class="faq-a"><p>Sim. Organizar tarefas, revisar textos, pesquisar, analisar documentos e dados e estruturar decisões são atividades que fazem parte de muitas rotinas profissionais.</p></div>
+      </details>
+      <details class="faq rv" name="faq">
+        <summary>Posso aplicar o conteúdo na minha vida pessoal?<span class="faq-ico"><svg class="ico"><use href="#i-plus"/></svg></span></summary>
+        <div class="faq-a"><p>Sim. O curso inclui organização pessoal e financeira, planejamento da rotina e criação de conteúdo e imagens para o dia a dia.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer" id="contato">
+  <div class="wrap">
+    <div class="f-grid">
+      <div>
+        <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true"></span>IA na Vida Real</a>
+        <p>Um curso prático para transformar Inteligência Artificial em uma ferramenta da sua rotina.</p>
+      </div>
+      <nav class="f-links" aria-label="Redes e contato">
+        <a href="#" title="[INSERIR LINK DO INSTAGRAM]"><svg class="ico"><use href="#i-ig"/></svg>Instagram</a>
+        <a href="#" title="[INSERIR LINK DO LINKEDIN]"><svg class="ico"><use href="#i-in"/></svg>LinkedIn</a>
+        <a href="#" title="[INSERIR E-MAIL OU LINK DE CONTATO]"><svg class="ico"><use href="#i-mail"/></svg>Contato</a>
+      </nav>
+    </div>
+    <div class="f-bottom">
+      <span>© <span id="yr">2026</span> IA na Vida Real</span>
+      <span>Curso online ao vivo · 4 encontros · 6 horas</span>
+    </div>
+  </div>
+</footer>
+
+<div class="mbar" id="mbar" aria-hidden="true">
+  <div class="mbar-txt"><b>IA na Vida Real</b>4 encontros ao vivo · 6h</div>
+  <a class="btn" href="#inscricao" tabindex="-1">Quero aprender IA</a>
+</div>
+
+<script>
+(function(){
+  var doc=document.documentElement;
+  doc.classList.add('js');
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* Link de inscrição: troque o valor abaixo pelo link real do checkout/formulário. */
+  var LINK_INSCRICAO='';
+  document.querySelectorAll('[data-inscricao]').forEach(function(a){
+    if(LINK_INSCRICAO){a.href=LINK_INSCRICAO;a.target='_blank';a.rel='noopener';}
+    else{a.addEventListener('click',function(e){e.preventDefault();});}
+  });
+
+  var yr=document.getElementById('yr'); if(yr) yr.textContent=new Date().getFullYear();
+
+  /* Navbar border on scroll */
+  var nav=document.querySelector('.nav');
+  var onScroll=function(){nav.classList.toggle('scrolled',window.scrollY>8);};
+  window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
+
+  /* Hero assistant */
+  var ex=[
+    {q:'Tenho 12 tarefas para esta semana e pouco tempo. Me ajude a dividir por prioridade e por dia.',a:['Segunda: as 3 tarefas com prazo mais próximo.','Terça e quarta: blocos de 2h para o projeto principal.','Sexta: revisão da semana e pendências menores.']},
+    {q:'Estou em dúvida entre dois projetos. Faça perguntas que me ajudem a decidir.',a:['Qual dos dois está mais ligado ao que você quer daqui a um ano?','Quanto tempo por semana cada um exige de verdade?','O que você perde se adiar um deles por três meses?']},
+    {q:'Quero entender os argumentos a favor e contra o trabalho híbrido. Separe os pontos e diga onde posso verificar.',a:['A favor: flexibilidade e menos tempo de deslocamento.','Contra: menos convivência e comunicação mais difícil.','Para checar: pesquisas recentes e relatórios de RH.']},
+    {q:'Revise este e-mail para ficar mais claro e cordial, sem mudar o sentido.',a:['Abri com o pedido principal logo na primeira frase.','Troquei termos vagos por prazos e próximos passos.','Encurtei de 14 para 7 linhas, mantendo o tom.']},
+    {q:'Sugira 3 conceitos visuais para o convite de aniversário da minha mãe, que adora jardinagem.',a:['Aquarela de flores do campo em tons suaves.','Estilo caderno de jardim, com sementes e anotações.','Minimalista: uma folha desenhada à mão e muito branco.']},
+    {q:'Aqui estão meus gastos de agosto. Onde estou gastando mais do que imagino?',a:['Delivery somou mais do que o mercado do mês.','Três assinaturas se repetem com a mesma função.','Pequenas compras diárias viraram 18% do total.']}
+  ];
+  var btns=[].slice.call(document.querySelectorAll('.verb'));
+  var chat=document.getElementById('chat'),q=document.getElementById('q'),a=document.getElementById('a'),bar=document.getElementById('progress');
+  var cur=0,timer=null,DUR=4600,paused=false;
+  function show(i,user){
+    cur=i;
+    btns.forEach(function(b,j){b.setAttribute('aria-pressed',j===i?'true':'false');});
+    q.textContent=ex[i].q;
+    a.innerHTML='';
+    ex[i].a.forEach(function(t){var li=document.createElement('li');li.textContent=t;a.appendChild(li);});
+    chat.classList.remove('swap');void chat.offsetWidth;chat.classList.add('swap');
+    var b=btns[i];var row=b.parentNode;
+    if(row.scrollWidth>row.clientWidth){row.scrollTo({left:b.offsetLeft-row.clientWidth/2+b.offsetWidth/2,behavior:reduce?'auto':'smooth'});}
+    if(user){stop();} else {run();}
+  }
+  function run(){
+    clearTimeout(timer);
+    if(reduce||paused)return;
+    bar.classList.remove('run');void bar.offsetWidth;bar.style.setProperty('--dur',DUR+'ms');bar.classList.add('run');
+    timer=setTimeout(function(){show((cur+1)%ex.length);},DUR);
+  }
+  function stop(){clearTimeout(timer);bar.classList.remove('run');paused=true;}
+  btns.forEach(function(b,i){b.addEventListener('click',function(){show(i,true);});});
+  var asst=document.getElementById('assistant');
+  asst.addEventListener('mouseenter',function(){clearTimeout(timer);bar.classList.remove('run');});
+  asst.addEventListener('mouseleave',function(){if(!paused)run();});
+  run();
+
+  /* Method: highlight parts */
+  var steps=[].slice.call(document.querySelectorAll('.step')),pc=document.getElementById('pc'),parts=[].slice.call(pc.querySelectorAll('.part'));
+  function focusPart(p){
+    steps.forEach(function(s){s.classList.toggle('on',s.dataset.p===p);s.setAttribute('aria-pressed',s.dataset.p===p?'true':'false');});
+    parts.forEach(function(el){el.classList.toggle('on',el.dataset.p===p);});
+    pc.classList.toggle('focus',!!p);
+  }
+  var locked=null;
+  steps.forEach(function(s){
+    s.setAttribute('aria-pressed','false');
+    s.addEventListener('mouseenter',function(){if(!locked)focusPart(s.dataset.p);});
+    s.addEventListener('mouseleave',function(){if(!locked)focusPart(null);});
+    s.addEventListener('click',function(){locked=(locked===s.dataset.p)?null:s.dataset.p;focusPart(locked);});
+  });
+
+  /* Reveal on scroll: only elements below the fold start hidden */
+  var rv=[].slice.call(document.querySelectorAll('.rv'));
+  if('IntersectionObserver' in window && !reduce){
+    var vh=window.innerHeight;
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){if(e.isIntersecting){e.target.classList.remove('pre');io.unobserve(e.target);}});
+    },{rootMargin:'0px 0px -8% 0px',threshold:.08});
+    rv.forEach(function(el){
+      if(el.getBoundingClientRect().top>vh*.92){el.classList.add('pre');io.observe(el);}
+    });
+  }
+
+  /* Mobile sticky CTA: after hero, hidden near the enrollment card and final CTA */
+  var mbar=document.getElementById('mbar'),hero=document.querySelector('.hero');
+  if('IntersectionObserver' in window){
+    var state={hero:true,ins:false,cta:false};
+    var upd=function(){var s=!state.hero&&!state.ins&&!state.cta;mbar.classList.toggle('show',s);mbar.setAttribute('aria-hidden',s?'false':'true');mbar.querySelector('a').tabIndex=s?0:-1;};
+    var mio=new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        if(e.target===hero)state.hero=e.isIntersecting;
+        else if(e.target.id==='inscricao')state.ins=e.isIntersecting;
+        else state.cta=e.isIntersecting;
+      });upd();
+    });
+    mio.observe(hero);mio.observe(document.getElementById('inscricao'));mio.observe(document.getElementById('cta-final'));
+  }
+})();
+</script>
+</body>
+</html>
