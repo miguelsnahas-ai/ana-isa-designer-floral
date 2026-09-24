@@ -29,8 +29,14 @@
   "hasCourseInstance": {
     "@type": "CourseInstance",
     "courseMode": "online",
-    "courseWorkload": "PT6H"
-  }
+    "courseWorkload": "PT6H",
+    "startDate": "2026-10-20",
+    "endDate": "2026-11-10"
+  },
+  "offers": [
+    {"@type": "Offer", "name": "Curso", "price": "197", "priceCurrency": "BRL", "category": "Paid"},
+    {"@type": "Offer", "name": "Curso + Mentoria individual", "price": "297", "priceCurrency": "BRL", "category": "Paid"}
+  ]
 }
 </script>
 <style>
@@ -378,6 +384,33 @@ section{scroll-margin-top:calc(var(--nav-h) + 12px)}
 .row div{display:grid;gap:4px;min-width:0}
 .row small{font-size:13px;color:var(--muted)}
 .fc-side .btn{margin-top:10px;width:100%}
+.dates{display:flex;flex-wrap:wrap;gap:6px;margin-top:2px}
+.dates span{padding:5px 9px;border-radius:8px;background:var(--surface-2);font:500 13.5px/1 var(--f-mono);font-variant-numeric:tabular-nums;color:var(--ink)}
+
+/* Plans */
+.enroll{display:grid;gap:18px}
+.plans{display:grid;gap:18px}
+@media (min-width:820px){.plans{grid-template-columns:1fr 1fr}}
+.plan{position:relative;border-radius:var(--r-lg);padding:clamp(26px,4vw,36px);display:grid;gap:22px;align-content:start;background:var(--surface);box-shadow:inset 0 0 0 1px var(--line);transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s}
+.plan:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg),inset 0 0 0 1px var(--line)}
+.plan-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.plan-name{font:500 12.5px/1.3 var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.price{display:flex;align-items:baseline;gap:8px;font-variant-numeric:tabular-nums}
+.price small{font:500 18px/1 var(--f-body);color:var(--muted)}
+.price b{font:700 clamp(3rem,6vw,3.8rem)/1 var(--f-display);letter-spacing:-.045em;color:var(--navy)}
+.plan-list{display:grid;gap:12px}
+.plan-list li{display:flex;gap:12px;align-items:flex-start;font-size:16px;line-height:1.45}
+.plan .btn{width:100%}
+.plan-hot{background:var(--navy);color:var(--on-navy);box-shadow:var(--shadow-lg);overflow:hidden}
+.plan-hot::before{content:"";position:absolute;width:380px;height:380px;right:-160px;top:-180px;border-radius:50%;background:radial-gradient(closest-side,rgba(47,91,255,.55),transparent);pointer-events:none}
+.plan-hot > *{position:relative}
+.plan-hot:hover{box-shadow:0 40px 80px -30px rgba(11,31,77,.6)}
+.plan-hot .plan-name,.plan-hot .price small{color:var(--on-navy-soft)}
+.plan-hot .price b{color:#fff}
+.plan-hot .ph{background:rgba(244,194,61,.15);color:#fff;border-color:var(--yellow)}
+.seats{display:inline-flex;align-items:center;gap:8px;padding:7px 12px;border-radius:999px;background:var(--yellow);color:#1F232B;font:600 11.5px/1 var(--f-mono);letter-spacing:.1em;text-transform:uppercase}
+:root[data-theme="dark"] .plan:not(.plan-hot) .price b{color:var(--ink)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .plan:not(.plan-hot) .price b{color:var(--ink)}}
 
 /* Final CTA */
 .final{padding-block:clamp(24px,4vw,40px) clamp(80px,10vw,120px)}
@@ -753,7 +786,8 @@ section{scroll-margin-top:calc(var(--nav-h) + 12px)}
       <p class="eyebrow">Formato</p>
       <h2 class="h2" id="format-title">Tudo o que você precisa saber para participar.</h2>
     </div>
-    <div class="format-card rv" id="inscricao">
+    <div class="enroll" id="inscricao">
+    <div class="format-card rv">
       <div class="fc-main">
         <p class="pill"><span class="live">Online ao vivo</span></p>
         <div class="facts">
@@ -767,12 +801,32 @@ section{scroll-margin-top:calc(var(--nav-h) + 12px)}
       </div>
       <div class="fc-side">
         <h3>Próxima turma</h3>
-        <div class="row"><span class="row-ico"><svg class="ico"><use href="#i-cal"/></svg></span><div><small>Datas</small><span class="ph">[INSERIR DATAS]</span></div></div>
-        <div class="row"><span class="row-ico"><svg class="ico"><use href="#i-clock"/></svg></span><div><small>Horário</small><span class="ph">[INSERIR HORÁRIO]</span></div></div>
-        <div class="row"><span class="row-ico"><svg class="ico"><use href="#i-tag"/></svg></span><div><small>Investimento</small><span class="ph">[INSERIR PREÇO E CONDIÇÕES]</span></div></div>
-        <!-- [INSERIR LINK DE INSCRIÇÃO] no href abaixo -->
-        <a class="btn btn-lg" href="#" data-inscricao>Quero aprender IA <svg class="ico"><use href="#i-arrow"/></svg></a>
+        <div class="row"><span class="row-ico"><svg class="ico"><use href="#i-cal"/></svg></span><div><small>Datas · terças-feiras</small><span class="dates"><span>20/10</span><span>27/10</span><span>03/11</span><span>10/11</span></span></div></div>
+        <div class="row"><span class="row-ico"><svg class="ico"><use href="#i-clock"/></svg></span><div><small>Horário</small><span>Das 20h às 21h30</span></div></div>
       </div>
+    </div>
+
+    <div class="plans">
+      <article class="plan rv">
+        <div class="plan-top"><p class="plan-name">Curso</p></div>
+        <p class="price"><small>R$</small><b>197</b></p>
+        <ul class="plan-list">
+          <li><span class="ck"><svg class="ico"><use href="#i-check"/></svg></span>4 encontros ao vivo de 1h30 (6 horas)</li>
+          <li><span class="ck"><svg class="ico"><use href="#i-check"/></svg></span>Método para pedidos melhores e prática com situações reais</li>
+          <li><span class="ck"><svg class="ico"><use href="#i-check"/></svg></span>Kit IA na Vida Real</li>
+        </ul>
+        <a class="btn btn-lg btn-ghost" href="#" data-inscricao="curso">Quero o curso <svg class="ico"><use href="#i-arrow"/></svg></a>
+      </article>
+      <article class="plan plan-hot rv" style="--d:.08s">
+        <div class="plan-top"><p class="plan-name">Curso + Mentoria individual</p><span class="seats">Limite de 10 vagas</span></div>
+        <p class="price"><small>R$</small><b>297</b></p>
+        <ul class="plan-list">
+          <li><span class="ck"><svg class="ico"><use href="#i-check"/></svg></span>Tudo do plano Curso</li>
+          <li><span class="ck"><svg class="ico"><use href="#i-check"/></svg></span><span>Mentoria individual <span class="ph">[INSERIR DURAÇÃO E FORMATO DA MENTORIA]</span></span></li>
+        </ul>
+        <a class="btn btn-lg btn-light" href="#" data-inscricao="mentoria">Quero curso + mentoria <svg class="ico"><use href="#i-arrow"/></svg></a>
+      </article>
+    </div>
     </div>
   </div>
 </section>
@@ -784,9 +838,8 @@ section{scroll-margin-top:calc(var(--nav-h) + 12px)}
       <p class="eyebrow">Comece agora</p>
       <h2 id="cta-title">A IA já faz parte do mundo. <span>Agora falta ela fazer parte da sua rotina.</span></h2>
       <p>Aprenda a usar IA de forma simples, prática e aplicável às situações que você realmente enfrenta.</p>
-      <!-- [INSERIR LINK DE INSCRIÇÃO] no href abaixo -->
-      <a class="btn btn-lg btn-light" href="#" data-inscricao>Quero aprender IA <svg class="ico"><use href="#i-arrow"/></svg></a>
-      <p class="final-note">4 encontros ao vivo · 1h30 cada · nível iniciante</p>
+      <a class="btn btn-lg btn-light" href="#inscricao">Quero aprender IA <svg class="ico"><use href="#i-arrow"/></svg></a>
+      <p class="final-note">Terças, de 20/10 a 10/11 · 20h às 21h30 · a partir de R$ 197</p>
     </div>
   </div>
 </section>
@@ -810,7 +863,7 @@ section{scroll-margin-top:calc(var(--nav-h) + 12px)}
       </details>
       <details class="faq rv" name="faq">
         <summary>O curso é ao vivo?<span class="faq-ico"><svg class="ico"><use href="#i-plus"/></svg></span></summary>
-        <div class="faq-a"><p>Sim. São 4 encontros online e ao vivo, de 1h30 cada, somando 6 horas. Datas e horário: <span class="ph">[INSERIR DATAS E HORÁRIO]</span>.</p></div>
+        <div class="faq-a"><p>Sim. São 4 encontros online e ao vivo, de 1h30 cada, somando 6 horas. As aulas acontecem às terças-feiras, 20/10, 27/10, 03/11 e 10/11, das 20h às 21h30.</p></div>
       </details>
       <details class="faq rv" name="faq">
         <summary>As aulas ficam gravadas?<span class="faq-ico"><svg class="ico"><use href="#i-plus"/></svg></span></summary>
@@ -863,7 +916,7 @@ section{scroll-margin-top:calc(var(--nav-h) + 12px)}
 </footer>
 
 <div class="mbar" id="mbar" aria-hidden="true">
-  <div class="mbar-txt"><b>IA na Vida Real</b>4 encontros ao vivo · 6h</div>
+  <div class="mbar-txt"><b>A partir de R$ 197</b>Início em 20/10 · ao vivo</div>
   <a class="btn" href="#inscricao" tabindex="-1">Quero aprender IA</a>
 </div>
 
@@ -873,10 +926,11 @@ section{scroll-margin-top:calc(var(--nav-h) + 12px)}
   doc.classList.add('js');
   var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* Link de inscrição: troque o valor abaixo pelo link real do checkout/formulário. */
-  var LINK_INSCRICAO='';
+  /* Links de inscrição: [INSERIR] os links reais do checkout de cada plano. */
+  var LINKS={curso:'',mentoria:''};
   document.querySelectorAll('[data-inscricao]').forEach(function(a){
-    if(LINK_INSCRICAO){a.href=LINK_INSCRICAO;a.target='_blank';a.rel='noopener';}
+    var url=LINKS[a.getAttribute('data-inscricao')];
+    if(url){a.href=url;a.target='_blank';a.rel='noopener';}
     else{a.addEventListener('click',function(e){e.preventDefault();});}
   });
 
